@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Imgui">
+      <UniqueIdentifier>{9b84cf7d-9181-4414-937d-49861855487b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Menu">
+      <UniqueIdentifier>{758c0311-feed-4b84-b5c8-30161549c27c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="数据">
+      <UniqueIdentifier>{c2087c91-851f-41d8-92ca-729b995774d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="绘图">
+      <UniqueIdentifier>{199de133-12c9-4873-989a-e09b2bd1b134}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx11.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\stb_rect_pack.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\stb_textedit.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\stb_truetype.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Administer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimBot.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="ESP.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuItem.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>数据</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>绘图</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectX.h">
+      <Filter>绘图</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>数据</Filter>
+    </ClInclude>
+    <ClInclude Include="Misc.h">
+      <Filter>Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\process.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="VMPstr.h">
+      <Filter>数据</Filter>
+    </ClInclude>
+    <ClInclude Include="myyanzheng.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_dx11.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Administer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimBot.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="ESP.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuItem.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Process.cpp">
+      <Filter>数据</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectX.cpp">
+      <Filter>绘图</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>绘图</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>数据</Filter>
+    </ClCompile>
+    <ClCompile Include="Misc.cpp">
+      <Filter>Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="myyanzheng.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
