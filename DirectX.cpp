@@ -23,23 +23,23 @@ bool __fastcall DirectX::Initialize(int screenWidth, int screenHeight, bool vsyn
 	ID3D11Texture2D* backBufferPtr;
 
 
-	m_vsync_enabled = vsync;	// 保存垂直同步设置
-	// 创建一个DirectX graphics interface factory.
+	m_vsync_enabled = vsync;	// Saving vertical sync settings
+	// Create a DirectX graphics interface factory.
 	result = CreateDXGIFactory(__uuidof(IDXGIFactory), (void**)&factory);
 	if (FAILED(result))return false;
 
 
-	// 用接口工厂创建一个主显卡的适配
+	// Create an adapter for the main graphics card with the interface factory
 	result = factory->EnumAdapters(0, &adapter);
 	if (FAILED(result))return false;
 
 
-	// 得到主适配器的输出.
+	// Get the output of the main adapter.
 	result = adapter->EnumOutputs(0, &adapterOutput);
 	if (FAILED(result))	return false;
 
 
-	//得到适合 DXGI_FORMAT_R8G8B8A8_UNORM 的显示模式.
+	//Get fit DXGI_FORMAT_R8G8B8A8_UNORM The display mode.
 	result = adapterOutput->GetDisplayModeList(DXGI_FORMAT_R8G8B8A8_UNORM, DXGI_ENUM_MODES_INTERLACED, &numModes, NULL);
 	if (FAILED(result))
 	{
@@ -52,14 +52,14 @@ bool __fastcall DirectX::Initialize(int screenWidth, int screenHeight, bool vsyn
 		return false;
 	}
 
-	// 保存显示模式到displayModeList中
+	// Save the display mode to displayModeList Medium
 	result = adapterOutput->GetDisplayModeList(DXGI_FORMAT_R8G8B8A8_UNORM, DXGI_ENUM_MODES_INTERLACED, &numModes, displayModeList);
 	if (FAILED(result))
 	{
 		return false;
 	}
 
-	//遍历所有显示模式，得到刷新率两个参数值numerator 和 denominato
+	//Iterate through all display modes to get the refresh rate for two parameter values numerator And denominato
 	for (i = 0; i < numModes; i++)
 	{
 		if (displayModeList[i].Width == (unsigned int)screenWidth)
@@ -71,7 +71,7 @@ bool __fastcall DirectX::Initialize(int screenWidth, int screenHeight, bool vsyn
 			}
 		}
 	}
-	// 得到显卡描述
+	// Get the video card description
 	result = adapter->GetDesc(&adapterDesc);
 	if (FAILED(result))
 	{
@@ -80,19 +80,19 @@ bool __fastcall DirectX::Initialize(int screenWidth, int screenHeight, bool vsyn
 	m_videoCardMemory = (int)(adapterDesc.DedicatedVideoMemory / 1024 / 1024);
 
 	 sprintf(m_videoCardDescription, "%ws",  adapterDesc.Description);
-	// 释放显示模式列表
+	// Release the display mode list
 	delete[] displayModeList;
 	displayModeList = 0;
 
-	//释放适配器输出.
+	//Release adapter output.
 	adapterOutput->Release();
 	adapterOutput = 0;
 
-	//释放适配器
+	//Release adapter
 	adapter->Release();
 	adapter = 0;
 
-	// 释放接口工厂.
+	// Release the interface factory.
 	factory->Release();
 	factory = 0;
 
@@ -129,15 +129,15 @@ bool __fastcall DirectX::Initialize(int screenWidth, int screenHeight, bool vsyn
 
 void __fastcall DirectX::EndScene()
 {
-	//渲染完成后，把后缓冲内容present到前缓冲
+	//After the dye is completed, put the contents of the buffer present To the front buffer
 	if (m_vsync_enabled)
 	{
-		// 锁定屏幕刷新率.
+		// Lock screen refresh rate.
 		m_swapChain->Present(1, 0);
 	}
 	else
 	{
-		// 尽可能快的present后缓冲.
+		//  As fast as you can. present After buffering.
 		m_swapChain->Present(0, 0);
 	}
 }
