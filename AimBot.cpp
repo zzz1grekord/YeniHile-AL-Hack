@@ -6,23 +6,23 @@ string a1 = CProcess.StringToUtf8(XORSTR("a1"));
 string a2 = CProcess.StringToUtf8(XORSTR("a2"));
 string a3 = CProcess.StringToUtf8(XORSTR("a3"));
 string a4 = CProcess.StringToUtf8(XORSTR("a4"));
-string TÊI = CProcess.StringToUtf8(XORSTR("T-ÊI"));
-string FÊI = CProcess.StringToUtf8(XORSTR("F-ÊI"));
-string ShirtÊI = CProcess.StringToUtf8(XORSTR("Shirt"));
-string Ctrlº¸ = CProcess.StringToUtf8(XORSTR("Ctrl"));
+string TÈçµ = CProcess.StringToUtf8(XORSTR("T-Key"));
+string FÈçµ = CProcess.StringToUtf8(XORSTR("F-Key"));
+string ShirtÈçµ = CProcess.StringToUtf8(XORSTR("Shirt"));
+string CtrlÈîÆ = CProcess.StringToUtf8(XORSTR("Ctrl"));
 
-string a5 = CProcess.StringToUtf8(XORSTR("Ó^"));
-string a6 = CProcess.StringToUtf8(XORSTR("≤±"));
-string a7 = CProcess.StringToUtf8(XORSTR("…Ì"));
+string a5 = CProcess.StringToUtf8(XORSTR("Head."));
+string a6 = CProcess.StringToUtf8(XORSTR("Neck."));
+string a7 = CProcess.StringToUtf8(XORSTR("Body"));
 string a8 = CProcess.StringToUtf8(XORSTR("a8"));
 
 const char* iKeyText[] = {a1.c_str(),a2.c_str()
-, a3.c_str(), a4.c_str(),TÊI.c_str(),FÊI.c_str()};
+, a3.c_str(), a4.c_str(),TKey.c_str(),FKey.c_str()};
 
 const char* iPosText[] = { a5.c_str(),a6.c_str(), a7.c_str(), a8.c_str() };
 
-const char* iSKeyText[] = { ShirtÊI.c_str(),Ctrlº¸.c_str()
-, a3.c_str(), a4.c_str(),TÊI.c_str(),FÊI.c_str() };
+const char* iSKeyText[] = { ShirtKey.c_str(),CtrlKey.c_str()
+, a3.c_str(), a4.c_str(),TKey.c_str(),FKey.c_str() };
 
 void __fastcall _AimBot::Manu()
 {
@@ -48,11 +48,11 @@ void __fastcall _AimBot::Manu()
 				ImGui::Text(CProcess.StringToUtf8(XORSTR("Aimbot:")).c_str());
 				ImGui::Separator();
 				{
-					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("É»¥Ê√Èú ")).c_str(), &bAimBot);
+					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("Memory aiming")).c_str(), &bAimBot);
 					ImGui::SameLine(0, 60);
-					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("üo··◊¯¡¶")).c_str(), &bRecoil);
-					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("µπµÿ≤ª√È")).c_str(), &bKneelDown);
-					//if (ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("≥¨ºâº”ÀŸ")).c_str(), &bSpeed))
+					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("No recoil.")).c_str(), &bRecoil);
+					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("You don't look down.")).c_str(), &bKneelDown);
+					//if (ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("Ë∂ÖÁ¥öÂä†ÈÄü")).c_str(), &bSpeed))
 					//{
 					//	GameManager::SpeedInt(bSpeed, iSpeed);
 					//}
@@ -66,46 +66,46 @@ void __fastcall _AimBot::Manu()
 					//}
 				}
 				ImGui::Separator();
-				ImGui::Text(CProcess.StringToUtf8(XORSTR("√Èú ÊI/≤øŒª")).c_str());
+				ImGui::Text(CProcess.StringToUtf8(XORSTR("Aiming key / parts")).c_str());
 				{
 					ImGui::PushItemWidth(75);
 
-					ImGui::Combo(CProcess.StringToUtf8(XORSTR("√Èú ÊI")).c_str(), &iKey, iKeyText, IM_ARRAYSIZE(iKeyText));
+					ImGui::Combo(CProcess.StringToUtf8(XORSTR("Aim key")).c_str(), &iKey, iKeyText, IM_ARRAYSIZE(iKeyText));
 					//ImGui::SameLine(0, 15);
-					//ImGui::Combo(u8"∞¥º¸2", &iKey2, u8"◊Ûº¸\0”“º¸\0≤‡º¸1\0≤‡º¸2\0Tº¸\0Fº¸\0\0\0\0");
+					//ImGui::Combo(u8"ÊåâÈîÆ2", &iKey2, u8"Â∑¶ÈîÆ\0Âè≥ÈîÆ\0‰æßÈîÆ1\0‰æßÈîÆ2\0TÈîÆ\0FÈîÆ\0\0\0\0");
 
-					ImGui::Combo(CProcess.StringToUtf8(XORSTR("√Èú ≤øŒª")).c_str(), &iPos,iPosText , IM_ARRAYSIZE(iPosText));
+					ImGui::Combo(CProcess.StringToUtf8(XORSTR("Target area.")).c_str(), &iPos,iPosText , IM_ARRAYSIZE(iPosText));
 					//ImGui::SameLine(0, 15);
-					//ImGui::Combo(u8"≤øŒª2", &iPos2, u8"Õ∑≤ø\0æ±≤ø\0a7\0ÀÊª˙\0\0\0\0");
-			/*		ImGui::Combo(CProcess.StringToUtf8(XORSTR("º”ÀŸÊI")).c_str(), &iSKey, iSKeyText, IM_ARRAYSIZE(iSKeyText));*/
+					//ImGui::Combo(u8"ÈÉ®‰Ωç2", &iPos2, u8"Â§¥ÈÉ®\0È¢àÈÉ®\0a7\0ÈöèÊú∫\0\0\0\0");
+			/*		ImGui::Combo(CProcess.StringToUtf8(XORSTR("Âä†ÈÄüÈçµ")).c_str(), &iSKey, iSKeyText, IM_ARRAYSIZE(iSKeyText));*/
 					ImGui::PopItemWidth();
 				}
 				ImGui::Separator();
-				ImGui::Text(CProcess.StringToUtf8(XORSTR("√È◊º∑∂Œß:")).c_str());
+				ImGui::Text(CProcess.StringToUtf8(XORSTR("Target range.:")).c_str());
 				{
 					ImGui::PushItemWidth(189);
 					ImGui::SliderFloat(CProcess.StringToUtf8(XORSTR("M", )).c_str(),&fFov, 0, 800, (CProcess.StringToUtf8(XORSTR("%.0f")).c_str()));
-					ImGui::SliderFloat(CProcess.StringToUtf8(XORSTR("‘§≈–∏ﬂ∂»", )).c_str(), &fHeight, 0, 20, (CProcess.StringToUtf8(XORSTR("%.2f")).c_str()));
+					ImGui::SliderFloat(CProcess.StringToUtf8(XORSTR("Anticipation height", )).c_str(), &fHeight, 0, 20, (CProcess.StringToUtf8(XORSTR("%.2f")).c_str()));
 
-					/*	ImGui::SliderFloat(u8"‘§≈–∏ﬂ∂»2", &fHeight2, 0, 20, "%.2f");*/
+					/*	ImGui::SliderFloat(u8"È¢ÑÂà§È´òÂ∫¶2", &fHeight2, 0, 20, "%.2f");*/
 
-					ImGui::SliderInt(CProcess.StringToUtf8(XORSTR("—π«π◊Û”“")).c_str(), &iRecoilX, 1, 100);
-					ImGui::SliderInt(CProcess.StringToUtf8(XORSTR("—π«π…œœ¬")).c_str(), &iRecoilY, 1, 100);
-					ImGui::Text(CProcess.StringToUtf8(XORSTR("—π«π ˝÷µ‘Ω¥Û∑˘∂»‘Ω¥Û")).c_str());
-					ImGui::Text(CProcess.StringToUtf8(XORSTR("‘§≈– ˝÷µ∂‘”¶Ãß«π")).c_str());
-					ImGui::Text(CProcess.StringToUtf8(XORSTR("‘§≈– ˝÷µ‘Ω¥Û,Ãß«πµ√‘Ω∏ﬂ")).c_str());
+					ImGui::SliderInt(CProcess.StringToUtf8(XORSTR("Press the gun left and right")).c_str(), &iRecoilX, 1, 100);
+					ImGui::SliderInt(CProcess.StringToUtf8(XORSTR("Press the gun up and down.")).c_str(), &iRecoilY, 1, 100);
+					ImGui::Text(CProcess.StringToUtf8(XORSTR("The greater the value of the pressure gun, the greater the")).c_str());
+					ImGui::Text(CProcess.StringToUtf8(XORSTR("To predict the value of the corresponding gun")).c_str());
+					ImGui::Text(CProcess.StringToUtf8(XORSTR("Predict the greater the value, the higher the gun")).c_str());
 					ImGui::PopItemWidth();
 				}
 				ImGui::Separator();
-				ImGui::Text(CProcess.StringToUtf8(XORSTR("—’…´£∫")).c_str());
+				ImGui::Text(CProcess.StringToUtf8(XORSTR("ColorÔºö")).c_str());
 				{
 					ImGui::PushItemWidth(150);
-					ImGui::ColorEdit3(CProcess.StringToUtf8(XORSTR("◊‘ﬂ˜…´")).c_str(), (float*)&cAim);
+					ImGui::ColorEdit3(CProcess.StringToUtf8(XORSTR("Self-cat color")).c_str(), (float*)&cAim);
 					ImGui::PopItemWidth();
 				}
 				ImGui::Separator();
-				ImGui::Text(CProcess.StringToUtf8(XORSTR("FLŒ®“ª’˝∞ÊæW±P")).c_str());
-				ImGui::Text(CProcess.StringToUtf8(XORSTR("ApexFL.cccpan.com√‹¥a6666")).c_str());
+				ImGui::Text(CProcess.StringToUtf8(XORSTR("FLThe only genuine network disk")).c_str());
+				ImGui::Text(CProcess.StringToUtf8(XORSTR("ApexFL.cccpan.comPassword.6666")).c_str());
 				ImGui::Separator();
 			}ImGui::End();
 			style.Colors[ImGuiCol_Text] = tmp;
