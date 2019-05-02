@@ -28,40 +28,40 @@ void __fastcall _ESP::Manu()
 				ImGui::Text(CProcess.StringToUtf8(XORSTR("BOX:")).c_str());
 				ImGui::Separator();
 				{
-					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("·½‰K")).c_str(), &b2DBox);
+					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("The diamonds.")).c_str(), &b2DBox);
 					ImGui::SameLine(0, 25);
-					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("ê ÓÑ")).c_str(), &bTeam);
+					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("Teammates.")).c_str(), &bTeam);
 					ImGui::SameLine(0, 35);
-					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("¾àëx")).c_str(), &bDistance);
+					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("Distance")).c_str(), &bDistance);
 
-					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("ÑªÁ¿")).c_str(), &bHealth);
+					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("Blood volume")).c_str(), &bHealth);
 					ImGui::SameLine(0, 25);
-					//ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("Ãû×Ö")).c_str(), &bName);				
-					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("Ó¢ÐÛ")).c_str(), &bHero);
+					//ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("Name.")).c_str(), &bName);				
+					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("Heroes.")).c_str(), &bHero);
 					ImGui::SameLine(0, 35);
-					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("¹Ç÷À")).c_str(), &bBone);
+					ImGui::Checkbox(CProcess.StringToUtf8(XORSTR("Bones.")).c_str(), &bBone);
 
 				}
 				ImGui::Separator();
-				ImGui::Text(CProcess.StringToUtf8(XORSTR("ÏÔÊ¾·¶Î§:")).c_str());
+				ImGui::Text(CProcess.StringToUtf8(XORSTR("Display range:")).c_str());
 				{
 					ImGui::PushItemWidth(179);
 					ImGui::SliderInt(CProcess.StringToUtf8(XORSTR("M")).c_str(), &iPlayerShow, 0, 600);
 					ImGui::PopItemWidth();
 				}
 				ImGui::Separator();
-				ImGui::Text(CProcess.StringToUtf8(XORSTR("ÑÕÉ«£º")).c_str());
+				ImGui::Text(CProcess.StringToUtf8(XORSTR("Colorï¼š")).c_str());
 				{
 					ImGui::PushItemWidth(150);
-					ImGui::ColorEdit3(CProcess.StringToUtf8(XORSTR("·½¿òÑÕÉ«")).c_str(), (float*)&cPlayer);
+					ImGui::ColorEdit3(CProcess.StringToUtf8(XORSTR("Box color")).c_str(), (float*)&cPlayer);
 					ImGui::PopItemWidth();
 					ImGui::PushItemWidth(150);
-					ImGui::ColorEdit3(CProcess.StringToUtf8(XORSTR("¿É¼ûµÐÈËÑÕÉ«")).c_str(), (float*)&cTeam);
+					ImGui::ColorEdit3(CProcess.StringToUtf8(XORSTR("Visible enemy color")).c_str(), (float*)&cTeam);
 					ImGui::PopItemWidth();
 				}
 				ImGui::Separator();
-				ImGui::Text(CProcess.StringToUtf8(XORSTR("FLÎ¨Ò»Õý°æ¾W±P")).c_str());
-				ImGui::Text(CProcess.StringToUtf8(XORSTR("ApexFL.cccpan.comÃÜ´a6666")).c_str());
+				ImGui::Text(CProcess.StringToUtf8(XORSTR("FLThe only genuine network disk")).c_str());
+				ImGui::Text(CProcess.StringToUtf8(XORSTR("ApexFL.cccpan.comPassword6666")).c_str());
 				ImGui::Separator();
 			}ImGui::End();
 			style.Colors[ImGuiCol_Text] = tmp;
