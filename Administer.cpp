@@ -5,7 +5,7 @@ bool tEntity;
 list <DrawEntity>Players = list <DrawEntity>();
 list <DrawEntity>Items = list <DrawEntity>();
 list <LootInfo>Loot = list <LootInfo>();
-// //////////////////////////////////////////////////////////////线程&绘制
+// //////////////////////////////////////////////////////////////袩芯褌芯泻 & 褉懈褋芯胁邪褌褜
 extern list <DrawEntity>tPlayers;
 extern list <DrawEntity>tItems;
 extern list <LootInfo>tLoot;
@@ -156,7 +156,7 @@ void __fastcall Draw()
 		if (pView.WorldToScreen(Position, DrawPosition))
 		{
 			bool bDis = Misc->bDistance;
-			if (i->Name != CProcess.StringToUtf8(XORSTR("战利品")).c_str())
+			if (i->Name != CProcess.StringToUtf8(XORSTR("Booty")).c_str())
 			{
 				int iLootSize = 0;
 
@@ -224,7 +224,7 @@ HRESULT __stdcall MyPresent(IDXGISwapChain* pSwapChain, UINT SyncInterval, UINT 
 	{
 		Menu->IsMenu = !Menu->IsMenu;
 	}
-	if (ImGui::IsKeyPressed(VK_OEM_3))//一键取消
+	if (ImGui::IsKeyPressed(VK_OEM_3))//涓�Key to cancel
 	{
 		Misc->bAutoAmmo = false;
 		Misc->bGrenades = false;
